@@ -1,0 +1,30 @@
+#sidebar {
+	background-color: var(--blue);
+	vertical-align: top;
+	height: 100%;
+	width: 55px;
+	overflow: auto;
+	float:left;
+	overflow: hidden;
+	position: fixed;
+	z-index: 99;
+}
+
+#sidebar ul{
+	list-style-type: none;
+    -webkit-padding-start: unset;
+}
+
+
+#sidebar ul li{
+	padding: 10px 13px;
+	font-size:  var(--font-size-icon-md);
+}
+
+#sidebar-content{
+	margin-top: -6px;
+}
+
+.active{
+	background-color: var(--orange);
+}

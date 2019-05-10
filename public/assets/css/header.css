@@ -1,0 +1,514 @@
+:root {
+    --blue: #071333;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #f44336;
+    --orange: #fd5f16;
+    --coral: coral;
+    --yellow: #ffc107;
+    --green: #5cb85c;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #337ab7;
+    --secondary: #6c757d;
+    --success: #5cb85c;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-size-heading1: 25px;
+    --font-size-icon-xl: 72px;
+    --font-size-icon-lg: 32px;
+    --font-size-icon-md: 24px;
+    --font-size-icon-sm: 18px;
+    --font-size-default: 15px;
+    --font-size-xl: 40px;
+    --font-size-lg: 32px;
+    --font-size-md: 20px;
+    --font-size-sm: 15px;
+}
+
+html, body {
+    height: 100%;
+    font-family: var(--font-family-sans-serif);
+    background-image: url("../img/background.png");
+
+}
+
+header {
+    background-color: var(--blue);
+    color: var(--white);
+    width: 100%;
+    height: 60px;
+    border-bottom: 3px solid var(--orange);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+
+}
+
+#logo {
+    margin-left: 10px;
+    margin-right: -7px;
+}
+
+.none-txt-decorations {
+    text-decoration: none;
+    color: white;
+}
+
+.vertical-middle {
+    vertical-align: middle;
+}
+
+.heading1 {
+    font-size: var(--font-size-heading1);
+    font-weight: 500;
+}
+
+.dispaly-inline {
+    display: inline;
+}
+
+.colored-first-letter::first-letter {
+    color: var(--orange) !important;
+}
+
+#user-profile {
+    font-size: var(--font-size-icon-lg);
+    vertical-align: middle;
+    float: right;
+    padding: 7px 10px;
+}
+
+#user-profile:hover {
+    color: var(--orange);
+}
+
+#searchBoxContainer {
+    float: right;
+    vertical-align: middle;
+    margin-top: 7px;
+    width: 280px;
+    margin-right: -20px;
+}
+
+#searchBox {
+    width: 215px;
+    height: 26px;
+    border-radius: 25px;
+    border: 2px solid var(--white);
+    padding: 0 25px 0 10px;
+    margin-top: 9px;
+    font-size: var(--font-size-default);
+}
+
+#searchBox:focus {
+    outline-width: 0;
+    border: 2px solid var(--orange);
+}
+
+#searchButton:focus {
+    outline-width: 0;
+}
+
+#searchButton:hover {
+    cursor: pointer;
+}
+
+#searchButton {
+    margin-left: -35px;
+    margin-top: 6px;
+    font-size: var(--font-size-icon-sm);
+    -webkit-appearance: none;
+    color: var(--orange);
+    padding-left: 5px;
+}
+
+#container {
+    height: 100%;
+    margin: 50px -8px 0px;
+}
+
+#content {
+    vertical-align: top;
+    width: 96%;
+    overflow: auto;
+    float: right;
+    padding: 25px 0px;
+    margin: 0 auto;
+}
+
+.fa-dollar-sign {
+    margin-left: 6px;
+}
+
+.fa-question {
+    margin-left: 3px;
+}
+
+#sub-menu, #search-category {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    right: 0;
+    margin-top: 3px;
+    background-color: var(--blue);
+}
+
+#search-category {
+    height: 200px;
+    overflow-y: auto;
+    right: 75px;
+    width: 250px;
+}
+
+#sub-menu ul, #search-category ul {
+    -webkit-padding-start: unset;
+    -webkit-margin-before: unset;
+    -webkit-margin-after: unset;
+}
+
+#sub-menu ul li, #search-category ul li {
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
+#sub-menu ul li:hover, #search-category ul li:hover {
+    background-color: var(--orange);
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+    cursor: pointer;
+}
+
+#search-category ul li:hover > .container .checkmark:after {
+    border: solid var(--blue);
+    border-width: 0 3px 3px 0;
+}
+
+#sub-menu ul a {
+    text-decoration: none;
+    color: var(--white) !important;
+    width: 100%;
+}
+
+#search-category ul li span {
+    vertical-align: text-top;
+    margin-left: 2px;
+    margin-top: 1px;
+}
+
+/* Button Styles Start*/
+.btn {
+    padding: 7px 10px;
+    min-width: 70px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    outline-width: 0;
+}
+
+.btn:hover {
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+    cursor: pointer;
+}
+
+.btn-orange {
+    border: 2px solid var(--orange);
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.btn-orange:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.btn-blue {
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
+    color: var(--white);
+
+}
+
+.btn-blue:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.btn-secondary {
+    border: 2px solid var(--secondary);
+    background-color: var(--secondary);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--secondary);
+}
+
+/* Button Styles Start*/
+
+.show {
+    position: fixed !important;
+    display: block !important;
+}
+
+.menu-item-lbl {
+    margin-left: 10px;
+}
+
+.modal-container {
+    z-index: 999;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transition: 0.10s;
+    overflow: auto;
+    transition: all 0.10s linear;
+}
+
+.modal {
+    background-color: #fefefe;
+    margin: auto;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 9999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.modal-close {
+    float: right;
+    opacity: 0.5;
+    margin-right: 10px;
+    height: 40px;
+    width: 5px;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-close:before, .modal-close:after {
+    position: absolute;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: var(--gray);
+}
+
+.modal-close:before {
+    transform: rotate(45deg);
+}
+
+.modal-close:after {
+    transform: rotate(-45deg);
+}
+
+.modal-header {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 15px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 3px solid var(--orange);
+}
+
+.modal-content, .modal-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modal-title {
+    font-weight: 500;
+}
+
+.modal-sm {
+    width: 300px;
+    min-height: 200px;
+    left: 39%;
+    top: 30%;
+}
+
+.modal-md {
+    width: 600px;
+    min-height: 200px;
+    left: 28%;
+    top: 18%;
+}
+
+@media (max-width: 585px) {
+    #searchBox {
+        position: fixed;
+        border: 2px solid var(--blue);
+    }
+
+    #searchButton {
+        position: fixed;
+        right: 25px;
+        margin-top: 11px;
+    }
+
+    #content {
+        margin: 50px 0px 0px !important;
+        padding-left: 50px;
+    }
+
+    #auctions-container {
+        margin-left: 68px !important;
+    }
+
+    .modal-sm {
+        left: 15% !important;
+    }
+
+    .modal-md {
+        left: 0px !important;
+    }
+
+    #search-category {
+        margin-top: 50px;
+    }
+}
+
+footer {
+    margin-left: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--orange);
+}
+
+.error-msg {
+    padding-left: 20px;
+    color: var(--red);
+    font-size: 12px;
+}
+
+.logged-user {
+    font-size: 14px;
+    display: inline;
+    width: 100%;
+    padding: 15px 15px 0px;
+    text-align: center;
+    margin-left: 28px;
+}
+
+#user-profile-img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: var(--orange);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

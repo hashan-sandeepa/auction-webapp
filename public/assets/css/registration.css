@@ -1,0 +1,76 @@
+#content {
+	width: 100%;
+	float: unset;
+}
+
+#form-container{
+	width : 400px;
+	margin: 0 auto;
+	background-color: var(--white);
+	padding: 30px;
+	border-bottom: 3px solid var(--orange);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+
+@media (max-width: 585px) {
+	#form-container{
+		left: unset;
+		top: 120px;
+	}
+}
+
+#form-container:hover{
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#heading{
+	text-align: center;
+	-webkit-margin-before: unset;
+}
+
+#user-avatar{
+	width: 100%;
+	text-align: center;
+	color: rgba(208,208,208,0.5);
+	font-size: var(--font-size-icon-xl);
+	margin-bottom: 10px;
+}
+
+/*
+.required{
+	border-right: 2px solid var(--red);
+}*/
+
+#form-container input[type="text"], #form-container input[type="password"], #form-container input[type="email"], #form-container select{
+	padding: 7px;
+	margin-left: 5px;
+	width: 100%;
+	margin-bottom: 5px;
+	border: none;
+	border-bottom: 2px solid var(--white);
+}
+
+#form-container input[type="text"]:focus, #form-container input[type="password"]:focus, #form-container input[type="email"]:focus, #form-container select:focus{
+	outline: 0;
+	border-bottom: 2px solid var(--orange);
+}
+
+#form-container input[type="checkbox"]{
+	margin-top: 10px;
+}
+
+#form-container button[type="submit"]{
+	width: 105%;
+	margin: 20px 0px 0px;
+	padding: 10px;
+}
+
+#form-container select{
+    width: 105%;
+}
+
+#captchaContainer{
+	margin: 20px 45px;
+}

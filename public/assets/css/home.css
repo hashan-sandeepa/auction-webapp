@@ -1,0 +1,342 @@
+#auctions-container{
+	margin-left: 20px;
+}
+
+.auction-title{
+	font-size: var(--font-size-md);
+	color: 	var(--blue);
+	text-align: center;
+	padding: 10px;
+	-webkit-margin-before: unset;
+    -webkit-margin-after: unset;
+}
+
+.current-bid, .auction-countdown{
+	text-align: center;
+	-webkit-margin-before: unset;
+    -webkit-margin-after: unset;
+}
+
+.current-bid{
+	color: 	var(--orange );
+	font-size: var(--font-size-lg);
+	margin-top: -3px;
+}
+
+.auction-countdown{
+	color: 	var(--blue);
+	font-size: var(--font-size-md);
+	width: 100%;
+}
+
+.auction-card {
+    /*!position: absolute;
+    *top: 50%;
+    *left: 50%;
+    *-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    *transform: translateX(-50%) translateY(-50%) translateZ(0);
+	*/
+    width: 225px;
+	height: 320px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    -webkit-transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s;
+	border-radius: 5px;
+	border: 1px solid rgb(224,224,224);
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.auction-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.auction-card:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.auction-img-container {
+    height: 170px;
+    overflow: hidden;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+	padding: 10px;
+}
+
+.auction-img-container img {
+    width: 100%;
+    display: block;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.auction-card:hover .auction-img-container {
+    height: 115px;
+}
+
+.auction-card:hover .auction-img-container img {
+    opacity: 0.6;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.auction-body {
+    position: relative;
+    height: 185px;
+    padding: 5px 20px;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+	border-top: 2px solid var(--coral);
+}
+
+.auction-card:hover .auction-body {
+    height: 300px;
+}
+
+.auction-categoty {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    height: 25px;
+    padding: 0 15px;
+    background-color: var(--coral);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 25px;
+}
+
+.auction-actions {
+    left: 20px;
+    right: 20px;
+    bottom: 56px;
+    margin: 0;
+    padding: 15px 18.8px;
+    color: #666C74;
+    line-height: 27px;
+    opacity: 0;
+    -webkit-transform: translateY(45px);
+    transform: translateY(45px);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.auction-card:hover .auction-actions {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+#bidAmount{
+	margin-top: 10px;
+	padding: 5px;
+	width: 150px;
+	font-size: var(--font-size-md);
+	border: 2px solid var(--blue);
+	text-align: right;
+}
+
+#bidAmount:focus{
+	outline:0;
+}
+
+/* Slideshow Styles Start*/
+.product-slide {
+	display: none;
+}
+.product-slide img {
+	vertical-align: middle;
+	max-height: 240px;
+	min-height: 240px;
+	max-width: 250px;
+	min-width: 250px;
+	padding: 20px;
+}
+
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-controllers{
+	text-align:center;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: var(--coral);
+}
+
+.slideshow-container:hover .prev, .slideshow-container:hover .next{
+	background-color: var(--coral);
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Slideshow Styles End*/
+
+.product-img-slider{
+	width: 50%;
+	display:inline-block;
+}
+
+.product-description{
+	padding: 0 10px 0;
+	width: 45%;
+	display:inline-block;
+	vertical-align: top;
+}
+
+.product-description ul{
+	margin-bottom: 20px;
+}
+
+.product-desc::before{
+	margin-top: 20px;	
+}
+.product-desc{
+	text-align: right;
+}
+.product-desc.current-bid{
+	color: var(--orange );
+    font-size: var(--font-size-xl);
+    margin-top: -3px;
+}
+
+.product-desc.auction-countdown{
+	color: var(--blue);
+    font-size: var(--font-size-md);
+}
+
+.product-description #desc {
+    min-height: 150px;
+}
+
+.product-description #bid-history {
+    min-height: 100px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.product-description #bid-history-title {
+    color: var(--blue);
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#criteria-contrainer {
+    margin-left: 23px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--blue);
+}
+
+#criteria-contrainer .category {
+    display: inline-block;
+    background-color: var(--orange);
+    color: white;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+#bid-history .history {
+    height: 37px;
+    padding: 10px;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#bid-history .history .bidder-name {
+    width: 60%;
+    display: inline;
+    float: left;
+    color: var(--blue);
+}
+
+#bid-history .history .bid-amount {
+    width: 40%;
+    display: inline;
+    float: right;
+    text-align: right;
+    color: var(--orange);
+}
+
+#bid-history .history .bid-dt {
+    float: right;
+    margin-top: 5px;
+    display: inline;
+    font-size: 13px;
+    color: darkgray;
+}
+
+#bid-history #msg {
+    text-align: center;
+    font-size: 14px;
+    color: darkgray;
+}

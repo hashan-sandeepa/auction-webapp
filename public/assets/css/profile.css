@@ -1,0 +1,94 @@
+#content {
+	width: 100%;
+	float: unset;
+}
+
+#form-container{
+	width : 400px;
+	margin: 0 auto;
+	background-color: var(--white);
+	padding: 30px;
+	border-bottom: 3px solid var(--orange);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+	margin-bottom: 15px;
+	margin-top: 50px;
+}
+
+@media (max-width: 585px) {
+	#form-container{
+		left: unset;
+		top: 120px;
+	}
+}
+
+#form-container:hover{
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#heading{
+	text-align: center;
+	-webkit-margin-before: unset;
+}
+
+#user-avatar{
+	width: 100%;
+	text-align: center;
+	color: rgba(208,208,208,0.5);
+	font-size: var(--font-size-icon-xl);
+	margin-bottom: 10px;
+}
+#user-avatar:hover{
+	cursor: pointer;
+	color: var(--coral);
+}
+
+#img-file-input{
+	display: none;
+}
+
+#acc-info{
+	text-align: center;	
+	margin-bottom: 10px;
+}
+
+#acc-info #userName{
+	color: var(--orange);
+}
+
+#form-container input[type="text"], #form-container input[type="password"]{
+	padding: 7px;
+	width: 100%;
+	margin-bottom: 5px;
+	border: none;
+	border-bottom: 2px solid var(--white);
+}
+
+#form-container input[type="text"]:focus, #form-container input[type="password"]:focus{
+	outline: 0;
+	border-bottom: 2px solid var(--orange);
+}
+
+#form-container button{
+	margin: 20px 2px 0px;
+	padding: 10px;
+	float: right;
+}
+
+.sub-head{
+	font-weight: 500;
+	padding-bottom: 5px;
+}
+
+#user-img{
+	position: relative;
+	width: 82px;
+	height: 82px;
+	border-radius: 50%;
+	margin-left: 160px;
+	cursor: pointer;
+    border: 3px solid white;
+}
+
+#user-img:hover {
+    border: 3px solid var(--orange);
+}
